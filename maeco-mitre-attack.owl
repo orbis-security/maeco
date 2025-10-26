@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://orbis-security.com/maeco/mitre-attack#"
+     xml:base="https://orbis-security.com/maeco/mitre-attack"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:maeco-mitre-attack="https://orbis-security.com/maeco/mitre-attack#">
+    <owl:Ontology rdf:about="https://orbis-security.com/maeco/mitre-attack"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#subTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#subTechnique">
+        <owl:inverseOf rdf:resource="https://orbis-security.com/maeco/mitre-attack#superTechnique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#superTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#superTechnique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#tactic -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#tactic">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://orbis-security.com/maeco/mitre-attack#technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#technique -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#technique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco/mitre-attack#Tactic"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#description -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Tactic"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#id -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#id">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Tactic"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#name -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/mitre-attack#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Tactic"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#Tactic -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/mitre-attack#Tactic"/>
+    
+
+
+    <!-- https://orbis-security.com/maeco/mitre-attack#Technique -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
