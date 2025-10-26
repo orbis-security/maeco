@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://orbis-security.com/maeco/hybrid-analysis#"
+     xml:base="https://orbis-security.com/maeco/hybrid-analysis"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:maeco="https://orbis-security.com/maeco#"
+     xmlns:maeco-mitre-attack="https://orbis-security.com/maeco/mitre-attack#"
+     xmlns:maeco-hybrid-analysis="https://orbis-security.com/maeco/hybrid-analysis#">
+    <owl:Ontology rdf:about="https://orbis-security.com/maeco/hybrid-analysis">
+        <owl:imports rdf:resource="https://orbis-security.com/maeco"/>
+        <owl:imports rdf:resource="https://orbis-security.com/maeco/mitre-attack"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#characteristics -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#characteristics">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#WindowsPeBinaryFile"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#creator -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#creator">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#dllCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#dllCharacteristics">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#WindowsPeOptionalHeader"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#entryPointSection -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#entryPointSection">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#WindowsPeOptionalHeader"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#WindowsPeSection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#informativeIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#informativeIdentifier">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#maliciousIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#maliciousIdentifier">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#module -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#module">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#Process"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#networkMode -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#networkMode">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisEnvironment"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#subsystem -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#subsystem">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#WindowsPeOptionalHeader"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#suspiciousIdentifier -->
+
+    <owl:ObjectProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#suspiciousIdentifier">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+        <rdfs:range rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#analysisEndTime -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#analysisEndTime">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#analysisErrorOrigin -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#analysisErrorOrigin">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#analysisErrorType -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#analysisErrorType">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#analysisStartTime -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#analysisStartTime">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#analysisState -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#analysisState">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#areCertificatesValid -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#areCertificatesValid">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#StaticFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#attckIdWiki -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#attckIdWiki">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#avDetect -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#avDetect">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#avLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#avLabel">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#avMatched -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#avMatched">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#avTotal -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#avTotal">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#capecId -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#capecId">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#category -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#category">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#certificatesValidationMessage -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#certificatesValidationMessage">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#StaticFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#classificationTag -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#classificationTag">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#MalwareLabel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#createdAt -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#createdAt">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#MalwareInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#environmentDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#environmentDescription">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#environmentId -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#environmentId">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileAnalysis -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileAnalysis">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileComposition -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileComposition">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#MalwareDevelopmentEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileMask -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileMask">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileName -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#ApiCall"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#File"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#MalwareInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#filePath -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#filePath">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileTypeDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileTypeDescription">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileTypeShort -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileTypeShort">
+        <owl:equivalentProperty rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#fileTypeTag"/>
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#fileTypeTag -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#fileTypeTag"/>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#humanKeywords -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#humanKeywords">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AlternateDataStream"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#icon -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#icon">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#identifiersCount -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#identifiersCount">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imphash -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imphash">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#Hashes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#importedObject -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#importedObject">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#MalwareDevelopmentEnvironment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#informativeIdentifiersCount -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#informativeIdentifiersCount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#SignatureMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#interesting -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#interesting">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#AnalysisMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#ObservableObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#jobId -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#jobId">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#maliciousIdentifiersCount -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#maliciousIdentifiersCount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#SignatureMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#normalizedPath -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#normalizedPath">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#operation -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#operation">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#WindowsRegistryKey"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#origin -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#origin">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#owner -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#owner">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#X509Certificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#parent -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#parent">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#Process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#rawScriptContent -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#rawScriptContent">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#ApiCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#relevance -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#relevance">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#SignatureMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#serialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#serialNumber">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#X509Certificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#submissionId -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#submissionId">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#MalwareInstance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#suspiciousIdentifiersCount -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#suspiciousIdentifiersCount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#SignatureMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco/mitre-attack#Technique"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#tag -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#tag">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#MalwareFamily"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#MalwareInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#threatLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#threatLevel">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#AnalysisMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#ObservableObject"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#SignatureMetadata"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#threatLevelHuman -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#threatLevelHuman">
+        <owl:equivalentProperty rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#threatLevelReadable"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#threatLevelReadable -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#threatLevelReadable">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#AnalysisMetadata"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#ObservableObject"/>
+                    <rdf:Description rdf:about="https://orbis-security.com/maeco#SignatureMetadata"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#threatScore -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#threatScore">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#totalFileComposition -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#totalFileComposition">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#File"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#totalNetworkConnections -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#totalNetworkConnections">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#DynamicFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#totalProcesses -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#totalProcesses">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#DynamicFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#totalSignatures -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#totalSignatures">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#StaticFeatures"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#uid -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#uid">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#Process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#urlAnalysis -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#urlAnalysis">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#validFrom -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#validFrom">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#X509Certificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#validUntil -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#validUntil">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#X509Certificate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#verdict -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#verdict">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisConclusion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#vxFamily -->
+
+    <owl:DatatypeProperty rdf:about="https://orbis-security.com/maeco/hybrid-analysis#vxFamily">
+        <rdfs:domain rdf:resource="https://orbis-security.com/maeco#AnalysisMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode"/>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem -->
+
+    <owl:Class rdf:about="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#defaultNetworkMode -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#defaultNetworkMode">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsAppContainer -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsAppContainer">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsDynamicBase -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsDynamicBase">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsForceIntegrity -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsForceIntegrity">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsGuardCf -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsGuardCf">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsHighEntropyVa -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsHighEntropyVa">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoBind -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoBind">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoIsolation -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoIsolation">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoSeh -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNoSeh">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNxCompat -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsNxCompat">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsTerminalServerAware -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsTerminalServerAware">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsWdmDriver -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageDllCharacteristicsWdmDriver">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeDllCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFile32BitMachine -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFile32BitMachine">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileAggressiveWsTrim -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileAggressiveWsTrim">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileBytesReversedHi -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileBytesReversedHi">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileBytesReversedLo -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileBytesReversedLo">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileDebugStripped -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileDebugStripped">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileDll -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileDll">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileExecutableImage -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileExecutableImage">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileLargeAddressAware -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileLargeAddressAware">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileLineNumsStripped -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileLineNumsStripped">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileLocalSymsStripped -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileLocalSymsStripped">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileNetRunFromSwap -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileNetRunFromSwap">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileRelocsStripped -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileRelocsStripped">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileRemovableRunFromSwap -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileRemovableRunFromSwap">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileSystem -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileSystem">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageFileUpSystemOnly -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageFileUpSystemOnly">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeFileCharacteristics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiApplication -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiApplication">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiBootServiceDriver -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiBootServiceDriver">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiRom -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiRom">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiRuntimeDriver -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemEfiRuntimeDriver">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemNative -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemNative">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemNativeWindows -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemNativeWindows">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemOs2Cui -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemOs2Cui">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemPosixCui -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemPosixCui">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemUnknown -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemUnknown">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsBootApplication -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsBootApplication">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsCeGui -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsCeGui">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsCui -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsCui">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsGui -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemWindowsGui">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemXbox -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#imageSubsystemXbox">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#WindowsPeSubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#simulatedNetworkMode -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#simulatedNetworkMode">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orbis-security.com/maeco/hybrid-analysis#torNetworkMode -->
+
+    <owl:NamedIndividual rdf:about="https://orbis-security.com/maeco/hybrid-analysis#torNetworkMode">
+        <rdf:type rdf:resource="https://orbis-security.com/maeco/hybrid-analysis#AnalysisNetworkMode"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
